@@ -1,0 +1,59 @@
+/* Modal */
+
+.modal {
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 1;
+  transition: transform;
+  transform: scale(1);
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+  margin: auto;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  width: 528px;
+  height: 581px;
+  justify-content: center;
+
+  &__title {
+    padding-top: 40px;
+    margin-bottom: 12px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+  }
+
+  &__button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    top: 8px;
+    right: 8px;
+
+    &:hover,
+    &:focus {
+      background-color: var(--white);
+      color: var(--blue);
+      cursor: pointer;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 250ms;
+    }
+  }
+}
+
+.is-hidden .modal {
+  transform: scale(0);
+  opacity: 0;
+}
