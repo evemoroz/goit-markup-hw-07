@@ -269,53 +269,43 @@
     </main>
     <!-- Footer -->
     <footer class="footer">
-      <div class="footer-items container">
-        <div class="footer-text">
+      <div class="footer-container container">
+        <div class="contacts">
           <a href="index.html"><span class="web">Web</span>Studio</a>
           <address class="address">
-            <p class="address-style">695 Park Ave, NY 10065, USA</p>
-            <a href="mailto:info@devstudio.com" class="mail-footer"
+            <p class="address__street">695 Park Ave, NY 10065, USA</p>
+            <a href="mailto:info@devstudio.com" class="address__mail"
               >info@devstudio.com</a
             ><br />
-            <a href="tel:+12127724150" class="phone-footer">+1 212-772-4150</a>
+            <a href="tel:+12127724150" class="address__phone"
+              >+1 212-772-4150</a
+            >
           </address>
         </div>
         <div class="social-section">
           <div>
-            <p class="social-text">FIND US ON</p>
+            <p class="footer-text">FIND US ON</p>
             <div class="icons-list">
-              <a
-                class="footer-icons"
-                href="http://instagram.com"
-                target="_blank"
-              >
-                <svg class="icon footer-icon">
+              <a href="http://instagram.com" target="_blank">
+                <svg>
                   <use
                     xlink:href="./images/symbol-defs.svg#icon-instagram"
                   ></use>
                 </svg>
               </a>
-              <a class="footer-icons" href="http://twitter.com" target="_blank">
-                <svg class="icon footer-icon">
+              <a href="http://twitter.com" target="_blank">
+                <svg>
                   <use xlink:href="./images/symbol-defs.svg#icon-twitter"></use>
                 </svg>
               </a>
-              <a
-                class="footer-icons"
-                href="http://facebook.com"
-                target="_blank"
-              >
-                <svg class="icon footer-icon">
+              <a href="http://facebook.com" target="_blank">
+                <svg>
                   <use
                     xlink:href="./images/symbol-defs.svg#icon-facebook"
                   ></use>
                 </svg> </a
-              ><a
-                class="footer-icons"
-                href="http://linkedin.com"
-                target="_blank"
-              >
-                <svg class="icon footer-icon">
+              ><a href="http://linkedin.com" target="_blank">
+                <svg>
                   <use
                     xlink:href="./images/symbol-defs.svg#icon-linkedin"
                   ></use>
@@ -323,9 +313,8 @@
               </a>
             </div>
           </div>
-
           <div>
-            <p class="social-text">Subscribe to the newsletter</p>
+            <p class="footer-text">Subscribe to the newsletter</p>
             <form
               class="subscribe-form"
               name="subscribe_form"
@@ -334,17 +323,16 @@
             >
               <label for=""
                 ><input
+                  class="email-box"
                   type="email"
                   name="email"
-                  id="email"
                   placeholder="E-mail"
                   required
-                  class="email-box"
               /></label>
-              <button class="submit-btn" type="submit">
-                <span class="subscribe"
+              <button class="submit-button" type="submit">
+                <span class="submit-button__subscribe"
                   >Subscribe
-                  <svg class="icon-send">
+                  <svg width="24px" height="24px">
                     <use xlink:href="./images/symbol-defs.svg#icon-send"></use>
                   </svg>
                 </span>
