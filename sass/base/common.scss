@@ -14,3 +14,11 @@ ul {
   width: 1200px;
   margin: 0 auto;
 }
+
+a:hover,
+a:focus {
+  color: var(--blue);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+  outline: none;
+}

@@ -1,6 +1,6 @@
 .customers-container {
-  padding-top: 94px;
-  padding-bottom: 50px;
+  margin: auto;
+  padding: 94px 0 94px 0;
 }
 
 .customers-list {
@@ -8,8 +8,7 @@
   gap: 30px;
   padding-inline-start: 0;
   justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 94px;
+  margin: 50px 0 0 0;
   &__details {
     width: 170px;
     height: 92px;

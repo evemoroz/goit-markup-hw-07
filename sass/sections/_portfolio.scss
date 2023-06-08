@@ -4,11 +4,6 @@
   padding-bottom: 94px;
 }
 
-.portfolio-overlay p {
-  margin: 0;
-  padding: 63px 24px 91px 24px;
-}
-
 .item:hover .portfolio-overlay,
 .item:focus .portfolio-overlay {
   transform: translateY(0);
@@ -21,15 +16,6 @@
   overflow: hidden;
 }
 
-.item .text {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.56;
-  letter-spacing: 0.03em;
-  color: var(--white);
-}
 .portfolio-overlay {
   position: absolute;
   top: 0;
@@ -45,6 +31,17 @@
   transition-timing-function: 101%;
   z-index: 2;
   transform: translateY(100%);
+  & p {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: var(--white);
+    margin: 0;
+    padding: 63px 24px 91px 24px;
+  }
 }
 
 .backdrop {
@@ -76,4 +73,53 @@
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+}
+
+/* Cards Section */
+.portfolio-list {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 0;
+}
+
+.portfolio-card {
+  border: 1px solid #eee;
+  width: 370px;
+  height: 404px;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  & h3 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 36px;
+    /* identical to box height, or 200% */
+    letter-spacing: 0.06em;
+    margin: 0;
+    color: #212121;
+    padding-left: 24px;
+    padding-top: 20px;
+  }
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    border-color: var(--blue);
+    border: 1px solid #eeeeee;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+  }
+  & p {
+    padding-left: 24px;
+    padding-bottom: 20px;
+    margin: 0;
+  }
+  &__text p {
+    padding-top: 10px;
+  }
 }
