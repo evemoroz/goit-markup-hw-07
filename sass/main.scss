@@ -1,136 +1,16 @@
 @import "./base/variables";
-@import "https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap";
 @import "./base/buttons";
-@import "./section/modal";
-body {
-  font-family: var(--roboto-font-family), var(--raleway-font-family), sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  color: #757575;
-  margin: 0;
-}
-
-ul {
-  list-style-type: none;
-}
-
-.web {
-  color: var(--blue);
-}
-
-.header {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  background: var(--white);
-  color: black;
-  width: inherit;
-  height: 80px;
-  align-items: center;
-  display: flex;
-}
-
-.header-text {
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.header-text.links {
-  gap: 50px;
-  margin-left: 93px;
-  margin-right: 330px;
-}
-
-.header-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 50px;
-  margin: 0;
-
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  color: #212121;
-}
-.header-address {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
-  margin: 0;
-  padding-inline-start: 0;
-}
-.header-contacts {
-  gap: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.header-icon {
-  max-height: 16px;
-  max-width: 16px;
-}
-
-.container.header-text {
-  height: 80px;
-  width: 1200px;
-  margin: auto;
-}
-
-.container > a {
-  font-family: "Raleway";
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  color: black;
-  text-decoration: none;
-}
-.header > a > span {
-  color: var(--blue);
-}
-
-.links a {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  color: #212121;
-}
-
-.header-address a {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  color: #757575;
-}
+@import "./sections/modal";
+@import "./base/fonts";
+@import "./sections/contacts";
+@import "./base/common.scss";
+@import "./sections/footer";
+@import "./sections/header";
+@import "./base/logo";
 
 .main-section {
   width: inherit;
   margin: 0;
-}
-
-.hero-section {
-  background-color: #2f303a;
-  width: inherit;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding-top: 200px;
-  padding-bottom: 210px;
-  background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/studio-background.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .title {
@@ -178,8 +58,7 @@ ul {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
-  /* or 171% */
+  line-height: 1.71;
   letter-spacing: 0.03em;
   width: 100%;
   gap: 10px;
@@ -433,15 +312,6 @@ a:focus {
   border-radius: 50%;
 }
 
-.links a:hover,
-.links a:focus {
-  border-bottom: 4px solid var(--blue);
-  padding-bottom: 28px;
-  border-radius: 2px;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 250ms;
-}
-
 .icons-list a:hover,
 .icons-list a:focus {
   color: var(--white);
@@ -569,13 +439,6 @@ a:focus {
   margin-bottom: 30px;
 }
 
-.header-logo:hover,
-.header-logo:focus {
-  color: currentColor;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 250ms;
-}
-
 /* hw-05 */
 
 .backdrop {
@@ -611,12 +474,6 @@ a:focus {
 
 a.active {
   color: var(--blue);
-}
-
-*:hover,
-*:focus {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 250ms;
 }
 
 .overlay {
@@ -685,14 +542,6 @@ a.active {
   letter-spacing: 0.03em;
   color: var(--white);
 }
-/*
-.test1::after {
-  content: "";
-  border-bottom: 4px solid #2196f3;
-  padding-bottom: 20px;
-  border-radius: 2px;
-}
-*/
 
 /* homework 6 */
 
@@ -719,123 +568,8 @@ a.active {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.submit-btn {
-  width: 200px;
-  height: 50px;
-  background: var(--blue);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  padding: 0;
-  border: none;
-}
-
-.subscribe {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.06em;
-  color: var(--white);
-  padding-left: 43px;
-  margin: 0;
-  padding-right: 28px;
-  justify-content: space-between;
-}
-
-.icon-send {
-  width: 24px;
-  height: 24px;
-}
-
-.subscribe-form {
-  display: flex;
-  gap: 12px;
-}
-
-textarea {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  padding: 12px 16px;
-  width: 416px;
-  height: 96px;
-  resize: none;
-}
-
-.terms-check {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: #757575;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  height: 28px;
-}
-
-.terms-check > span > a {
-  color: var(--blue);
-}
-
-.email-box:focus-visible {
-  outline: none;
-}
-
-.checkbox {
-  appearance: none;
-}
-
 .service-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.agree-check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.agree-check .checkmark {
-  appearance: none;
-}
-
-.agree-check .check-icon {
-  width: 16px;
-  height: 16px;
-  border: 2px solid #212121;
-  border-radius: 2px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  color: var(--white);
-}
-
-.checkmark:checked + .check-icon {
-  background-color: var(--blue);
-  border-color: var(--blue);
-  fill: var(--white);
-  outline: none;
-  stroke: var(--white);
-  stroke-width: 0.2;
-  color: var(--blue);
-}
-
-.check-icon:hover,
-.check-icon:focus {
-  cursor: pointer;
 }

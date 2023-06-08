@@ -14,7 +14,7 @@
   <body>
     <div>
       <!-- Header -->
-      <header>
+      <header class="style">
         <div class="container header-text header">
           <a href="index.html" class="header-logo"
             ><span class="web">Web</span>Studio</a
@@ -31,7 +31,7 @@
           <ul class="header-address">
             <li>
               <a class="header-contacts" href="mailto:info@devstudio.com"
-                ><svg class="header-icon">
+                ><svg height="16px" width="16px">
                   <use
                     href="./images/symbol-defs.svg#icon-envelope-hover"
                   ></use>
@@ -44,7 +44,7 @@
                 class="header-contacts"
                 href="tel:+12127724150"
                 class="phone-header"
-                ><svg class="header-icon">
+                ><svg height="16px" width="16px">
                   <use href="./images/symbol-defs.svg#icon-Vector"></use></svg
                 >+1 212-772-4150</a
               >
@@ -419,10 +419,10 @@
                     placeholder="E-mail"
                     required
                 /></label>
-                <button class="submit-btn" type="submit">
-                  <span class="subscribe"
+                <button class="submit-button" type="submit">
+                  <span class="submit-button__subscribe"
                     >Subscribe
-                    <svg class="icon-send">
+                    <svg width="24px" height="24px">
                       <use
                         xlink:href="./images/symbol-defs.svg#icon-send"
                       ></use>
@@ -482,14 +482,14 @@
                 placeholder="Enter the text"
               ></textarea>
             </label>
-            <label class="terms-check agree-check"
+            <label class="agree-check"
               ><input
                 class="checkmark"
                 type="checkbox"
                 name="terms-and-conditions"
                 value="agree"
                 required
-              /><svg class="check-icon" width="16" height="16">
+              /><svg class="agree-check__icon" width="16" height="16">
                 <use href="./images/symbol-defs.svg#icon-check"></use>
               </svg>
               <span>
@@ -502,8 +502,8 @@
                 >
               </span>
             </label>
-            <div class="send-btn-section">
-              <button class="send-btn" type="submit">Send</button>
+            <div class="modal--submit">
+              <button class="modal--submit__button" type="submit">Send</button>
             </div>
           </form>
         </div>
