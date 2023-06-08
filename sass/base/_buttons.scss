@@ -17,12 +17,12 @@
   }
 }
 
-.submit-button {
+.subscribe-button {
   @extend .button;
   width: 200px;
   height: 50px;
   padding: 0;
-  &__subscribe {
+  & span {
     font-family: "Roboto";
     font-style: normal;
     font-weight: 700;
